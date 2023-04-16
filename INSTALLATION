@@ -1,0 +1,25 @@
+In order to install omnimapper, you must have a valid C++ build environment with
+CMake (> 3.12) and a Python 3 (> 3.7) installation. A Blender installation is
+also a requirement, but if you are installing this add-on you probably already
+know as much.
+
+To perform a default installation, run
+
+$ cmake -Bbuild && cd build && make install
+
+This should install the add-on in the appropriate directory for Blender user
+add-ons and it should be ready to use once you restart Blender. 
+
+If you want to install the add-on to another location, simply pass
+-DCMAKE_INSTALL_PREFIX=<your desired installation path> to cmake as a command
+line argument.
+
+If you are a developer, we recommend passing -DDEV=1 to cmake. This will create
+timestamped shared libraries so that you don't have to restart Blender every
+time you want to test out a new build of the add-on. For this, you must also
+pass OMNIMAPPER_DEV=1 as an enviroment variable to Blender upon startup. Running
+
+$ make install
+
+within your build directory will build and install the modified add-on to your
+previously specified installation path.
