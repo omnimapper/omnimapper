@@ -5,7 +5,7 @@ import sys
 
 bl_info = {
 	"name": "omnimapper",
-	"blender": (2, 80, 0),
+	"blender": (3, 1, 0),
 	"category": "Object",
 }
 
